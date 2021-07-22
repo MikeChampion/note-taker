@@ -3,7 +3,7 @@ const db = require("../db/service.js");
 // console.log(db);
 const router = new Router();
 
-router.get("/notes.html", async (req, res) => {
+router.get("/notes", async (req, res) => {
     const notes = await db.index();
     res.status(200).json(notes);
 });
