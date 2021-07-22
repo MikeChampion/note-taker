@@ -1,28 +1,14 @@
 const express = require("express");
-const http = require("http");
-const fs = require("fs");
-// const api = require("./public/assets/js/routes.js");
+const apiRouter = require("./routes/api.js");
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 const app = express();
+app.use(express.static("public"));
+app.use(express.json());
+app.use("/api", apiRouter);
 
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/public/index.html");
-});
-
-app.get("/notes", (req, res) => {
-    res.sendFile(__dirname + "/public/notes.html");
-});
-
+// APP LISTENER
 app.listen(PORT, () => {
-    console.log("server running");
-});
-
-app.get("/api/notes", (req, res) => {
-    res.sendFile(__dirname + "/public/notes.html");
-});
-
-app.post("/api/notes", (req, res) => {
-    res.sendFile(__dirname + "/public/notes.html");
+    console.info("server running");
 });
