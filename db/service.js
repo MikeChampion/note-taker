@@ -15,6 +15,10 @@ const api = {
             JSON.stringify([...currentNotes, { ...newNote, ...{ id: uuid } }])
         );
     },
+    async delete(idToDel) {
+        let currentNotes = await this.index();
+        currentNotes = currentNotes.filter(({ id }) => id !== idToDel);
+    },
 };
 
 (async () => {
