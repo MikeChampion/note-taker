@@ -4,7 +4,6 @@ let realPath;
 
 const api = {
     async index() {
-        console.log("Hello index");
         return JSON.parse(await fs.readFile(`${realPath}/db/db.json`, "utf-8"));
     },
     async create(newNote) {
