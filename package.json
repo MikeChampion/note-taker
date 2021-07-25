@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "engines": {
-    "node": "14.17.1"},
+    "node": "14.17.1"
+  },
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +16,13 @@
     "nodemon": "^2.0.12"
   },
   "dependencies": {
+    "@heroku/buildpack-registry": "^1.0.1",
+    "async-file": "^2.0.2",
+    "cli-ux": "^4.9.3",
     "express": "^4.16.4",
+    "got": "^9.6.0",
     "heroku": "^7.56.1",
-    "uuid": "^8.3.2"}
+    "phoenix": "^1.5.9",
+    "uuid": "^8.3.2"
+  }
 }
