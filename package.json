@@ -16,13 +16,8 @@
     "nodemon": "^2.0.12"
   },
   "dependencies": {
-    "@heroku/buildpack-registry": "^1.0.1",
-    "async-file": "^2.0.2",
-    "cli-ux": "^4.9.3",
     "express": "^4.16.4",
-    "got": "^9.6.0",
     "heroku": "^7.56.1",
-    "phoenix": "^1.5.9",
     "uuid": "^8.3.2"
   }
 }
